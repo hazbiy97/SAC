@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SATC</title>
+  <link rel="stylesheet" href="assets/homepage/css/flexslider.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="assets/homepage/themed.css">
+</head>
+
+<style type="text/css">
+  *,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.stage {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrapper {
+  position: relative;
+  color: #fff;
+  /*font-size: 2.5rem;*/
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  padding-top: 0.65rem;
+  padding-left: 0.5rem;
+  padding-right: 0.36rem;
+  padding-bottom: 0.2rem;
+}
+.slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+          transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 0.15rem;
+  height: 145%;
+  background: #fff;
+  z-index: 4;
+  -webkit-animation: slash 6s ease-in infinite;
+          animation: slash 6s ease-in infinite;
+}
+.slash:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0.75rem;
+  height: 120%;
+  z-index: -1;
+}
+.slash:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.sides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.sides .side {
+  position: absolute;
+  background: #fff;
+}
+.sides .side:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+  -webkit-animation: side-top ease 6s infinite;
+          animation: side-top ease 6s infinite;
+}
+.sides .side:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 0.15rem;
+  height: 100%;
+  -webkit-transform: translateY(-101%);
+          transform: translateY(-101%);
+  -webkit-animation: side-right ease 6s infinite;
+          animation: side-right ease 6s infinite;
+}
+.sides .side:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.15rem;
+  -webkit-transform: translateX(101%);
+          transform: translateX(101%);
+  -webkit-animation: side-bottom ease 6s infinite;
+          animation: side-bottom ease 6s infinite;
+}
+.sides .side:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 0.15rem;
+  height: 100%;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-animation: side-left ease 6s infinite;
+          animation: side-left ease 6s infinite;
+}
+.text {
+  position: relative;
+}
+.text--backing {
+  opacity: 0;
+}
+.text--left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  overflow: hidden;
+}
+.text--left .inner {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: text-left 6s ease-in-out infinite;
+          animation: text-left 6s ease-in-out infinite;
+}
+.text--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.text--right .inner {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-animation: text-right 6s ease-in-out infinite;
+          animation: text-right 6s ease-in-out infinite;
+}
+@-webkit-keyframes slash {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  6% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  13% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  16.6% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+}
+@keyframes slash {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  6% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  13% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(1);
+  }
+  16.6% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+            transform: translate(-50%, -50%) rotate(-24deg) scaleY(0);
+  }
+}
+@-webkit-keyframes text-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  58% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+@keyframes text-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  58% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+@-webkit-keyframes text-right {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  10% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  58% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  70% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+}
+@keyframes text-right {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  10% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  58% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  70% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+}
+@-webkit-keyframes side-top {
+  0%, 14% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+  24%, 55% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  65% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+@keyframes side-top {
+  0%, 14% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+  24%, 55% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  65% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+@-webkit-keyframes side-right {
+  0%, 14%, 23% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+  30%, 62% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  72% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+  100% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+}
+@keyframes side-right {
+  0%, 14%, 23% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+  30%, 62% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  72% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+  100% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+}
+@-webkit-keyframes side-bottom {
+  0%, 14%, 24%, 28% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+  37%, 70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  79% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+  100% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+}
+@keyframes side-bottom {
+  0%, 14%, 24%, 28% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+  37%, 70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  79% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+  100% {
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+  }
+}
+@-webkit-keyframes side-left {
+  0%, 14%, 24%, 34%, 35% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+  44%, 79% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  86% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+  100% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+@keyframes side-left {
+  0%, 14%, 24%, 34%, 35% {
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%);
+  }
+  44%, 79% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  86% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+  100% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+    .sr-item{
+        display: none;
+    }
+    .card-img-bottom-mr {
+      color: #fff;
+      height: 13rem;
+      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/15.jpg) center no-repeat;
+      background-size: cover;
+    }
+    .card-img-bottom-act {
+      color: #fff;
+      height: 12rem;
+      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/16.jpg) center no-repeat;
+      background-size: cover;
+    }
+    .card-img-bottom-asg {
+      color: #fff;
+      height: 13rem;
+      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/11.jpg) center no-repeat;
+      background-size: cover;
+    }
+    div[class^="card-img-bottom-"]:before{
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,0.5);
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
+
+    .table>thead:first-child>tr:first-child>th {
+        text-align: center;
+    }
+
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+        border-width: 0;
+        vertical-align: middle;
+    }
+    b{color:#00285f;}
+    .labelselect {
+        width: 20% !important
+    }
+    .text-muted>.fa{
+        font-size:15px;
+        margin-bottom: 10px;
+        line-height:20px;
+    }
+    .select {
+        width: 80% !important;
+        float: left;
+    }
+    .tile{
+        margin-bottom:8px;
+    }
+
+    .switch {
+        margin: 0;
+        padding: 0;
+    }
+    span.item-count.animate-number.semi-bold {
+        font-size: 20px;
+        font-family: 'ericsson_capital', arial;
+    }
+    .item-1,
+    .item-2,
+    .item-3 {
+        font-family:'Roboto';
+        position: absolute;
+        display: block;
+        top: 2em;
+        font-size: 2em;
+
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .item-1{
+        animation-name: anim-1;
+    }
+
+    .item-2{
+        animation-name: anim-2;
+    }
+
+    .item-3{
+        animation-name: anim-3;
+    }
+
+    @keyframes anim-1 {
+        0%, 8.3% { top: -50px; opacity: 0.5; }
+        8.3%,25% { top: 25%; opacity: 1; }
+        33.33%, 100% { top: 50px; opacity: 0; }
+    }
+
+    @keyframes anim-2 {
+        0%, 33.33% { top: -50px; opacity: 0; }
+        41.63%, 58.29% { top: 25%; opacity: 1; }
+        66.66%, 100% { top: 50px; opacity: 0; }
+    }
+
+    @keyframes anim-3 {
+        0%, 66.66% { top: -50px; opacity: 0; }
+        74.96%, 91.62% { top: 25%; opacity: 1; }
+        100% { top: 50px; opacity: 0; }
+    }
+</style>
+
+<!-- PHP checker -->
+<? 
+function issetor(&$var, $default = false) {
+    return isset($var) ? $var : $default;
+}
+?>
+
+<!--
+    <ul class='just-mobile' style="padding: 0px; float:none;">
+       <div class='with-bottom-line' style="width: 100%; text-align: center; background: #e8e8e8; padding-top: 10px">
+            <span class="lead" style="color:#777"> 
+                <?php echo $tp_id; ?>
+            </span>
+        </div>
+   </ul>-->
+
+<!-- filter dashboard mode
+   <ul class="breadcrumb push-down-0">
+     <div class='pull-left' style='padding-top:2px;font-size:11px;'>
+         <a class='btn <?php echo ($filterby_tp ? 'btn-default' : 'btn-primary'); ?> btn-xs' href="
+            <?php echo base_url().'dashboard/';?>">DASHBOARD
+         </a><a class='btn <?php echo ($filterby_tp ? 'btn-primary' : 'btn-default'); ?> btn-xs' href="
+            <?php echo base_url().'dashboard?filterby_tp=all';?>">DASHBOARD BY TP
+         </a>
+       </div> 
+       <div class='pull-right desktop'>
+            <?php echo $tp_id; ?>
+        </div>
+        
+   </ul> 
+-->
+
+<body style="background-color: rgb(245,245,245)">
+  <!-- slider 
+
+  <section id="jumbotron">
+  <div class="jumbotron jumbotron-fluid" style="margin: 0;">
+    <div class="jumbotron-image"></div>
+    <div class="jumbotron-desc"></div>
+    <div class="jumbotron-text">
+      <span>Welcome to SATC</span>
+    </div>
+  </div>
+</section>-->
+  <section id="kategori" style="background-color: rgb(255,255,255); padding-top: 20px; padding-bottom: 60px; padding-top: 60px; margin: 0;">
+    <div class="container" >
+      <div style="padding-top: 10px; padding-bottom: 10px">
+        <h3>Class</h3>
+      </div>
+      <div class="flexslider carousel">
+        <ul class="slides">
+          <?php if (issetor($classes)): ?>
+            <?php foreach ($classes as $key => $class): ?>
+              <li>
+              <a href="<?= base_url('homepage/class/'.$class['class_id'])?>">
+                <div class="item">
+                  <div class="item-image-no-padding">
+                      <div class='card-img-bottom-act'>
+                          <div class='stage'>
+                            <div class='wrapper' style='font-size: 2.7rem;'>
+                              <div class='slash'></div>
+                              <div class='sides'>
+                                <div class='side'></div>
+                                <div class='side'></div>
+                                <div class='side'></div>
+                                <div class='side'></div>
+                              </div>
+                              <div class='text'>
+                                <div class='text--backing'><?= $class['short_name']?></div>
+                                <div class='text--left'>
+                                  <div class='inner'><?= $class['short_name']?></div>
+                                </div>
+                                <div class='text--right'>
+                                  <div class='inner'><?= $class['short_name']?></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item-body">
+                    <div class="item-title">
+                      <?= $class['name']?>
+                    </div>
+                    <div class="item-desc">
+                      <?= $class['place']?>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <?php endforeach ?>
+          <?php endif ?>
+
+          <?php 
+            $s = array_fill(0,9, '');
+
+            foreach($s as $S) :
+          ?>
+            <li>
+              <!-- <a href="<?= base_url('homepage/class/all')?>"> -->
+                <div class="item">
+                  <div class="item-image">
+                    <!-- <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' /> -->
+                    <div class="item-image-desc">
+                      <ul>
+                        <li>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="item-body">
+                    <div class="item-title">
+                      Cooming Soon
+                    </div>
+                    <div class="item-desc">
+                      -
+                    </div>
+                  </div>
+                </div>
+              <!-- </a> -->
+            </li>
+          <? endforeach; ?>
+        </ul>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-6">
+          <a href="<?= base_url('homepage/class/all')?>">
+            <div class="item">
+              <div class="item-image">
+                <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' />
+                <div class="item-image-desc">
+                  <ul>
+                    <li>
+                      <?php echo $TPs[1]['priceRange'];?>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="item-body">
+                <div class="item-title">
+                  class
+                </div>
+                <div class="item-desc">
+                  JABODETABEK
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="<?php echo base_url().'details/apartemen/';?>">
+            <div class="item">
+              <div class="item-image">
+                <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' />
+                <div class="item-image-desc">
+                  <ul>
+                    <li>
+                      <?php echo $TPs[1]['priceRange'];?>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item-body">
+                <div class="item-title">
+                  Apartement
+                </div>
+                <div class="item-desc">
+                  JABODETABEK
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </section>
+  <!-- <section class="populer">
+  <div class="container">
+    <div class="section-header" style="padding-top: 10px; padding-bottom: 10px">
+      <h3>Populer</h3>
+    </div>
+    <div class="row" id="items">
+      <?php 
+          $number = 0;
+          $TPs= array_merge($TPs,$TPs);
+          $TPs= array_merge($TPs,$TPs);
+          unset($TPs[1]);
+          foreach ($TPs as $key => $TP) :
+            if ($key < 9) :?>
+      <div class="col-md-3">
+        <a href="<?php echo base_url().'details/class/'.$TP['houseId'];?>">
+          <div class="item">
+            <div class="item-image">
+              <img src="<?php echo asset_url().'img/'.$TP['dashboardImage']?>" alt='' />
+              <div class="item-image-desc items">
+                <ul>
+                  <li>
+                    <?php echo $TP['priceRange'];?>
+                  </li>
+                </ul>
+              </div>
+              <button>Quickview</button>
+            </div>
+
+            <div class="item-body">
+              <div class="item-title">
+                <?php echo $TP['name'];?>
+              </div>
+              <div class="item-desc">
+                <?php echo $TP['description'];?>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <?php endif;
+          endforeach; ?>
+    </div>
+  </div>
+  </section> -->
+  <section>
+    <div class="footer">
+
+    </div>
+  </section>
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')
+  </script>
+
+  <!-- FlexSlider -->
+  <script defer src="assets/homepage/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 210,
+        itemMargin: 10,
+        minItems: 2,
+        maxItems: 4,
+        start: function (slider) {
+          $('body').removeClass('loading');
+        }
+      });
+    });
+    $(document).ready(function () {
+      //AppendDashboard();
+      setTimeout(function () {
+        /*test filter
+        $("#items *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf("pes") > -1)
+        });*/
+        //DashboardBox();
+      }, 3000);
+
+      setTimeout(function () {
+        // $('#load-refresh-1').fadeOut("slow");
+      }, 1500);
+    })
+    /*
+        function AppendDashboard(){
+            <?php if(!($tp_id == null && $filterby_tp)) { ?>
+                $('#get_sto_total').empty();
+                $('#get_sto_nd').empty();
+                $('#get_sto_r').empty();
+                $('#get_sto_f').empty();
+                $('#get_sto_v').empty();
+                $('#get_sto_total').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:24px">');
+                $('#get_sto_nd').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+                $('#get_sto_r').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+                $('#get_sto_f').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+                $('#get_sto_v').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+
+                $('#get_rfi_total').empty();
+                $('#get_rfi_c').empty();
+                $('#get_rfi_total').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:24px;line-height:18px">');
+                $('#get_rfi_c').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+
+                $('#get_3_sto_nd').empty();
+                $('#get_3_sto_nd').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+
+                $('#get_4_sto_r').empty();
+                $('#get_4_sto_r').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+
+                $('#get_5_sto_f').empty();
+                $('#get_5_sto_f').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+
+                $('#get_6_sto_v').empty();
+                $('#get_6_sto_v').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
+            <?php }else{ 
+                foreach ($TPs as $TP) { ?> 
+                    $('#get_".$TP['row_number']."_sto').empty();
+                    $('#get_".$TP['row_number']."_sto').append('<span class=\"fa fa-circle-o-notch fa-spin\" style=\"font-size:18px;line-height:18px\">');
+               <?php }
+            }?>
+        };
+
+        function DashboardBox(){
+            var role = '<?php echo $role;?>';
+            var url = '<?php echo base_url();?>autoloader/box_dashboard_completed/';
+            var tp_id = '<?php if(isset($tp_id)){echo $tp_id;};?>';
+            <?php if(!($tp_id == null && $filterby_tp)) { ?>
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                       role: role,
+                       tp_id: tp_id
+                    },
+                    success: function(result) {
+                        //BOX1
+                        $('#get_sto_total').empty();
+                        $('#get_sto_nd').empty();
+                        $('#get_sto_r').empty();
+                        $('#get_sto_f').empty();
+                        $('#get_sto_v').empty();
+                        $('#get_sto_desc').empty();
+                        $('#get_sto_total').append(result.get_sto_total);
+                        $('#get_sto_nd').append(result.get_sto_nd);
+                        $('#get_sto_r').append(result.get_sto_r);
+                        $('#get_sto_f').append(result.get_sto_f);
+                        $('#get_sto_v').append(result.get_sto_v);
+                        $('#get_sto_desc').append(result.get_sto_desc);
+                        $('#bar_0').data('percentage',result.get_sto_desc+'%');
+                        $('#bar_0').css("width",result.get_sto_desc+'%');
+
+                        //BOX2
+                        $('#get_rfi_total').empty();
+                        $('#get_rfi_c').empty();
+                        $('#get_rfi_desc').empty();
+                        $('#get_rfi_total').append(result.get_rfi_total);
+                        $('#get_rfi_c').append(result.get_rfi_c);
+                        $('#get_rfi_desc').append(result.get_rfi_desc);
+                        $('#bar_1').data('percentage',result.get_rfi_desc+'%');
+                        $('#bar_1').css("width",result.get_rfi_desc+'%');
+
+
+                        //BOX3
+                        $('#get_3_sto_nd').empty();
+                        $('#get_3_sto_nd_desc').empty();
+                        $('#get_3_sto_nd').append(result.get_sto_nd);
+                        $('#get_3_sto_nd_desc').append(result.get_sto_nd_desc);
+                        $('#bar_3').data('percentage',result.get_sto_nd_desc+'%');
+                        $('#bar_3').css("width",result.get_sto_nd_desc+'%');
+
+                        //BOX4
+                        $('#get_4_sto_r').empty();
+                        $('#get_4_sto_r_desc').empty();
+                        $('#get_4_sto_r').append(result.get_sto_r);
+                        $('#get_4_sto_r_desc').append(result.get_sto_r_desc);
+                        $('#bar_4').data('percentage',result.get_sto_r_desc+'%');
+                        $('#bar_4').css("width",result.get_sto_r_desc+'%');
+
+                        //BOX5
+                        $('#get_5_sto_f').empty();
+                        $('#get_5_sto_f_desc').empty();
+                        $('#get_5_sto_f').append(result.get_sto_f);
+                        $('#get_5_sto_f_desc').append(result.get_sto_f_desc);
+                        $('#bar_5').data('percentage',result.get_sto_f_desc+'%');
+                        $('#bar_5').css("width",result.get_sto_f_desc+'%');
+
+                        //BOX6
+                        $('#get_6_sto_v').empty();
+                        $('#get_6_sto_v_desc').empty();
+                        $('#get_6_sto_v').append(result.get_sto_v);
+                        $('#get_6_sto_v_desc').append(result.get_sto_desc);
+                        $('#bar_6').data('percentage',result.get_sto_desc+'%');
+                        $('#bar_6').css("width",result.get_sto_desc+'%'); 
+                    }
+                });
+            <?php } else { 
+                foreach ($TPs as $TP){
+                    $sto_percentage = number_format(($TP['sto_total']/$STO_TOTAL*100),2,'.',',');
+                    echo "$('#get_".$TP['row_number']."_sto').empty();";
+                    echo "$('#get_".$TP['row_number']."_desc').empty();";
+                    echo "$('#get_".$TP['row_number']."_sto').append(".$TP['sto_total'].");";
+                    echo "$('#get_".$TP['row_number']."_desc').append(".$sto_percentage.");";
+                }
+            } ?>
+        };
+
+        setInterval(function(){
+            AppendDashboard();
+            DashboardBox();
+       }, 15 * 60 * 1000);*/
+  </script>
+
+</html>
