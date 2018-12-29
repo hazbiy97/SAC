@@ -34,7 +34,7 @@ class Login extends CI_Controller {
     {
         if($this->session->userdata('email') != null)
         {
-            redirect('login/redirect_to');
+            redirect('index.php/login/redirect_to');
         }else{
             // $data['user'] = $this->User_model->get_all_user();
 
@@ -97,9 +97,9 @@ class Login extends CI_Controller {
     {
         if($this->session->userdata('email') != null)
         {
-            redirect('homepage');
+            redirect('index.php/homepage');
         }else{
-            redirect('login/login');
+            redirect('index.php/login/login');
         }
     }
 }
