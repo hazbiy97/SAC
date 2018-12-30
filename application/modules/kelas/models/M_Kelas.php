@@ -1,17 +1,16 @@
 <?php
 
-class M_Homepage extends CI_Model {
+class M_Kelas extends CI_Model {
 
     public function __construct(){
         parent::__construct();
         $this->load->library('session');
     }
 
-    public function getClass($email){
+    public function getClassDetails($class_id){
         $this->db->select('*');
         $this->db->from('class');
-        $this->db->join('users', 'class.lecturer = users.user_id', 'left');
-        $this->db->where('email', $email);
+        $this->db->where('class_id', $class_id);
         
         $query = $this->db->get(); //echo $sql; die();
 
@@ -22,15 +21,14 @@ class M_Homepage extends CI_Model {
         }
     }
 
-    public function getClassDataTable($lecturer){
-        $this->db->select('class.class_id, class.name, class.place, class.grade, class.term');
+    public function getClassAttendee($class_id){
+        $this->db->select('*');
         $this->db->from('class');
-        $this->db->join('users', 'lecturer = user_id', 'left');
-        $this->db->where('email', $lecturer);
+        $this->db->where('class_id', $class_id);
         
         $query = $this->db->get(); //echo $sql; die();
 
-        if ($query->num_rows() > 1) {
+        if ($query->num_rows() == 1) {
             // return $query->result_array();
             $results = $query->result_array();
             $columns = [];
@@ -45,13 +43,7 @@ class M_Homepage extends CI_Model {
                         $columns[] = $column;
                     }
                     // echo $column_value;
-                    if ($column_name == 'grade') {
-                        $new_row[] = 'S'.$column_value;
-                    } else if ($column_name == 'term') {
-                        $new_row[] = $column_value.'/'.($column_value + 1);
-                    } else {
-                        $new_row[] = $column_value;
-                    }
+                    $new_row[] = $column_value;
                 }
 
                 $data[] = $new_row;
@@ -64,10 +56,12 @@ class M_Homepage extends CI_Model {
 
             // echo "<pre>";
             // print_r($result);
-            // die();
 
             return $result;
-        } 
+            // die();
+        } else if ($query->num_rows() > 1){
+            return $query->result_array();
+        }
     }
 }
 ?>

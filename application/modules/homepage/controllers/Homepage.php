@@ -13,8 +13,12 @@ class Homepage extends MX_Controller
     $email = $this->session->userdata('email');
     if ($email != null) {
       $data['classes'] = $this->M_Homepage->getClass($email);
+      $data['tableDataObject'] = $this->M_Homepage->getClassDataTable($email);
       $activeNavbarItem = 'Dijual';
-      
+      // echo "<pre>";
+      //       print_r($data['tableDataObject']);
+      //       die();
+
       $this->load->module('newmenu');
       $this->newmenu->showNavBar($activeNavbarItem);
       $this->load->view('dashboard', $data);

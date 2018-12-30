@@ -34,7 +34,7 @@ class Login extends CI_Controller {
     {
         if($this->session->userdata('email') != null)
         {
-            redirect('index.php/login/redirect_to');
+            redirect('login/redirect_to');
         }else{
             // $data['user'] = $this->User_model->get_all_user();
 
@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE) {
             if(isset($this->session->userdata['logged_in'])){
-                redirect(base_url()."index.php/login/redirect_to");
+                redirect(base_url()."login/redirect_to");
             }else{
                 $data = array(
                     'error_message' => 'Please Fulfill Username & Password !'
@@ -80,7 +80,7 @@ class Login extends CI_Controller {
                     );
 
                     $this->session->set_userdata($session_data);
-                    redirect(base_url()."index.php/login/redirect_to");
+                    redirect(base_url()."login/redirect_to");
                 }
             } else {
                 $data = array(
@@ -97,9 +97,9 @@ class Login extends CI_Controller {
     {
         if($this->session->userdata('email') != null)
         {
-            redirect('index.php/homepage');
+            redirect('homepage');
         }else{
-            redirect('index.php/login/login');
+            redirect('login/login');
         }
     }
 }

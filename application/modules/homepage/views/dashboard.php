@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>SATC</title>
+  <title>SAC</title>
   <link rel="stylesheet" href="assets/homepage/css/flexslider.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="assets/homepage/themed.css">
 </head>
@@ -151,6 +151,11 @@
   -webkit-animation: text-left 6s ease-in-out infinite;
           animation: text-left 6s ease-in-out infinite;
 }
+
+#class_table>tbody>tr>td{
+    cursor: pointer;
+}
+
 .text--right {
   position: absolute;
   top: 0;
@@ -451,19 +456,19 @@
     .card-img-bottom-mr {
       color: #fff;
       height: 13rem;
-      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/15.jpg) center no-repeat;
+      /*background: url(assets/coroowicaksono/homepage/images/bg/15.jpg) center no-repeat;*/
       background-size: cover;
     }
     .card-img-bottom-act {
       color: #fff;
       height: 12rem;
-      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/16.jpg) center no-repeat;
+      /*background: url(assets/coroowicaksono/homepage/images/bg/16.jpg) center no-repeat;*/
       background-size: cover;
     }
     .card-img-bottom-asg {
       color: #fff;
       height: 13rem;
-      background: url(<?php echo base_url();?>assets/coroowicaksono/homepage/images/bg/11.jpg) center no-repeat;
+      /*background: url(assets/coroowicaksono/homepage/images/bg/11.jpg) center no-repeat;*/
       background-size: cover;
     }
     div[class^="card-img-bottom-"]:before{
@@ -566,44 +571,8 @@ function issetor(&$var, $default = false) {
 }
 ?>
 
-<!--
-    <ul class='just-mobile' style="padding: 0px; float:none;">
-       <div class='with-bottom-line' style="width: 100%; text-align: center; background: #e8e8e8; padding-top: 10px">
-            <span class="lead" style="color:#777"> 
-                <?php echo $tp_id; ?>
-            </span>
-        </div>
-   </ul>-->
-
-<!-- filter dashboard mode
-   <ul class="breadcrumb push-down-0">
-     <div class='pull-left' style='padding-top:2px;font-size:11px;'>
-         <a class='btn <?php echo ($filterby_tp ? 'btn-default' : 'btn-primary'); ?> btn-xs' href="
-            <?php echo base_url().'dashboard/';?>">DASHBOARD
-         </a><a class='btn <?php echo ($filterby_tp ? 'btn-primary' : 'btn-default'); ?> btn-xs' href="
-            <?php echo base_url().'dashboard?filterby_tp=all';?>">DASHBOARD BY TP
-         </a>
-       </div> 
-       <div class='pull-right desktop'>
-            <?php echo $tp_id; ?>
-        </div>
-        
-   </ul> 
--->
-
-<body style="background-color: rgb(245,245,245)">
-  <!-- slider 
-
-  <section id="jumbotron">
-  <div class="jumbotron jumbotron-fluid" style="margin: 0;">
-    <div class="jumbotron-image"></div>
-    <div class="jumbotron-desc"></div>
-    <div class="jumbotron-text">
-      <span>Welcome to SATC</span>
-    </div>
-  </div>
-</section>-->
-  <section id="kategori" style="background-color: rgb(255,255,255); padding-top: 20px; padding-bottom: 60px; padding-top: 60px; margin: 0;">
+<body style="background-color: rgb(255,255,255)">
+  <section id="kategori" style="background-color: rgb(245,245,245); padding-top: 20px; padding-bottom: 60px; padding-top: 60px; margin: 0;">
     <div class="container" >
       <div style="padding-top: 10px; padding-bottom: 10px">
         <h3>Class</h3>
@@ -613,7 +582,7 @@ function issetor(&$var, $default = false) {
           <?php if (issetor($classes)): ?>
             <?php foreach ($classes as $key => $class): ?>
               <li>
-              <a href="<?= base_url('homepage/class/'.$class['class_id'])?>">
+              <a href="<?= base_url('kelas/attendance/'.$class['class_id'])?>">
                 <div class="item">
                   <div class="item-image-no-padding">
                       <div class='card-img-bottom-act'>
@@ -654,12 +623,11 @@ function issetor(&$var, $default = false) {
           <?php endif ?>
 
           <?php 
-            $s = array_fill(0,9, '');
-
+            $s = array_fill(0,3, '');
             foreach($s as $S) :
           ?>
             <li>
-              <!-- <a href="<?= base_url('homepage/class/all')?>"> -->
+              <!-- <a href="<?= base_url('homepage/kelas/all')?>"> -->
                 <div class="item">
                   <div class="item-image">
                     <!-- <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' /> -->
@@ -685,104 +653,12 @@ function issetor(&$var, $default = false) {
           <? endforeach; ?>
         </ul>
       </div>
-
-      <!-- <div class="row">
-        <div class="col-md-6">
-          <a href="<?= base_url('homepage/class/all')?>">
-            <div class="item">
-              <div class="item-image">
-                <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' />
-                <div class="item-image-desc">
-                  <ul>
-                    <li>
-                      <?php echo $TPs[1]['priceRange'];?>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="item-body">
-                <div class="item-title">
-                  class
-                </div>
-                <div class="item-desc">
-                  JABODETABEK
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="<?php echo base_url().'details/apartemen/';?>">
-            <div class="item">
-              <div class="item-image">
-                <img src="<?php echo asset_url().'img/'.$TPs[1]['dashboardImage']?>" alt='' />
-                <div class="item-image-desc">
-                  <ul>
-                    <li>
-                      <?php echo $TPs[1]['priceRange'];?>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="item-body">
-                <div class="item-title">
-                  Apartement
-                </div>
-                <div class="item-desc">
-                  JABODETABEK
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div> -->
+    </div>
   </section>
-  <!-- <section class="populer">
-  <div class="container">
-    <div class="section-header" style="padding-top: 10px; padding-bottom: 10px">
-      <h3>Populer</h3>
-    </div>
-    <div class="row" id="items">
-      <?php 
-          $number = 0;
-          $TPs= array_merge($TPs,$TPs);
-          $TPs= array_merge($TPs,$TPs);
-          unset($TPs[1]);
-          foreach ($TPs as $key => $TP) :
-            if ($key < 9) :?>
-      <div class="col-md-3">
-        <a href="<?php echo base_url().'details/class/'.$TP['houseId'];?>">
-          <div class="item">
-            <div class="item-image">
-              <img src="<?php echo asset_url().'img/'.$TP['dashboardImage']?>" alt='' />
-              <div class="item-image-desc items">
-                <ul>
-                  <li>
-                    <?php echo $TP['priceRange'];?>
-                  </li>
-                </ul>
-              </div>
-              <button>Quickview</button>
-            </div>
-
-            <div class="item-body">
-              <div class="item-title">
-                <?php echo $TP['name'];?>
-              </div>
-              <div class="item-desc">
-                <?php echo $TP['description'];?>
-              </div>
-            </div>
-          </div>
-        </a>
+    <div class="container" style="padding: 50px 0 50px 0">
+      <h2>Class List</h2><br>
+        <table id="class_table" class="stripe row-border order-column nowrap" style="width:100%; "></table>
       </div>
-      <?php endif;
-          endforeach; ?>
-    </div>
-  </div>
-  </section> -->
   <section>
     <div class="footer">
 
@@ -790,10 +666,11 @@ function issetor(&$var, $default = false) {
   </section>
   <!-- jQuery -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')
-  </script>
 
+  <link rel="stylesheet" type="text/css" href="/sac/assets/js/plugins/datatables/buttons.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
   <!-- FlexSlider -->
   <script defer src="assets/homepage/jquery.flexslider.js"></script>
   <script type="text/javascript">
@@ -811,146 +688,27 @@ function issetor(&$var, $default = false) {
       });
     });
     $(document).ready(function () {
-      //AppendDashboard();
-      setTimeout(function () {
-        /*test filter
-        $("#items *").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf("pes") > -1)
-        });*/
-        //DashboardBox();
-      }, 3000);
+      var dataObject = <?php echo json_encode($tableDataObject); ?>;
+
+      var columns = [];
+
+      $('#class_table').dataTable({
+        "data": dataObject.data,
+        "columns": dataObject.columns
+      });
 
       setTimeout(function () {
-        // $('#load-refresh-1').fadeOut("slow");
+        $('#load-refresh-1').fadeOut("slow");
       }, 1500);
+
+      var table = $('#class_table').DataTable();
+        $('#class_table tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+            console.log(data);
+            window.location.href = "<?= base_url() ?>kelas/attendance/" + data[0];
+        } );
     })
-    /*
-        function AppendDashboard(){
-            <?php if(!($tp_id == null && $filterby_tp)) { ?>
-                $('#get_sto_total').empty();
-                $('#get_sto_nd').empty();
-                $('#get_sto_r').empty();
-                $('#get_sto_f').empty();
-                $('#get_sto_v').empty();
-                $('#get_sto_total').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:24px">');
-                $('#get_sto_nd').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-                $('#get_sto_r').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-                $('#get_sto_f').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-                $('#get_sto_v').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-
-                $('#get_rfi_total').empty();
-                $('#get_rfi_c').empty();
-                $('#get_rfi_total').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:24px;line-height:18px">');
-                $('#get_rfi_c').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-
-                $('#get_3_sto_nd').empty();
-                $('#get_3_sto_nd').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-
-                $('#get_4_sto_r').empty();
-                $('#get_4_sto_r').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-
-                $('#get_5_sto_f').empty();
-                $('#get_5_sto_f').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-
-                $('#get_6_sto_v').empty();
-                $('#get_6_sto_v').append('<span class="fa fa-circle-o-notch fa-spin" style="font-size:18px;line-height:18px">');
-            <?php }else{ 
-                foreach ($TPs as $TP) { ?> 
-                    $('#get_".$TP['row_number']."_sto').empty();
-                    $('#get_".$TP['row_number']."_sto').append('<span class=\"fa fa-circle-o-notch fa-spin\" style=\"font-size:18px;line-height:18px\">');
-               <?php }
-            }?>
-        };
-
-        function DashboardBox(){
-            var role = '<?php echo $role;?>';
-            var url = '<?php echo base_url();?>autoloader/box_dashboard_completed/';
-            var tp_id = '<?php if(isset($tp_id)){echo $tp_id;};?>';
-            <?php if(!($tp_id == null && $filterby_tp)) { ?>
-                $.ajax({
-                    url: url,
-                    type: 'post',
-                    dataType: 'json',
-                    data: {
-                       role: role,
-                       tp_id: tp_id
-                    },
-                    success: function(result) {
-                        //BOX1
-                        $('#get_sto_total').empty();
-                        $('#get_sto_nd').empty();
-                        $('#get_sto_r').empty();
-                        $('#get_sto_f').empty();
-                        $('#get_sto_v').empty();
-                        $('#get_sto_desc').empty();
-                        $('#get_sto_total').append(result.get_sto_total);
-                        $('#get_sto_nd').append(result.get_sto_nd);
-                        $('#get_sto_r').append(result.get_sto_r);
-                        $('#get_sto_f').append(result.get_sto_f);
-                        $('#get_sto_v').append(result.get_sto_v);
-                        $('#get_sto_desc').append(result.get_sto_desc);
-                        $('#bar_0').data('percentage',result.get_sto_desc+'%');
-                        $('#bar_0').css("width",result.get_sto_desc+'%');
-
-                        //BOX2
-                        $('#get_rfi_total').empty();
-                        $('#get_rfi_c').empty();
-                        $('#get_rfi_desc').empty();
-                        $('#get_rfi_total').append(result.get_rfi_total);
-                        $('#get_rfi_c').append(result.get_rfi_c);
-                        $('#get_rfi_desc').append(result.get_rfi_desc);
-                        $('#bar_1').data('percentage',result.get_rfi_desc+'%');
-                        $('#bar_1').css("width",result.get_rfi_desc+'%');
-
-
-                        //BOX3
-                        $('#get_3_sto_nd').empty();
-                        $('#get_3_sto_nd_desc').empty();
-                        $('#get_3_sto_nd').append(result.get_sto_nd);
-                        $('#get_3_sto_nd_desc').append(result.get_sto_nd_desc);
-                        $('#bar_3').data('percentage',result.get_sto_nd_desc+'%');
-                        $('#bar_3').css("width",result.get_sto_nd_desc+'%');
-
-                        //BOX4
-                        $('#get_4_sto_r').empty();
-                        $('#get_4_sto_r_desc').empty();
-                        $('#get_4_sto_r').append(result.get_sto_r);
-                        $('#get_4_sto_r_desc').append(result.get_sto_r_desc);
-                        $('#bar_4').data('percentage',result.get_sto_r_desc+'%');
-                        $('#bar_4').css("width",result.get_sto_r_desc+'%');
-
-                        //BOX5
-                        $('#get_5_sto_f').empty();
-                        $('#get_5_sto_f_desc').empty();
-                        $('#get_5_sto_f').append(result.get_sto_f);
-                        $('#get_5_sto_f_desc').append(result.get_sto_f_desc);
-                        $('#bar_5').data('percentage',result.get_sto_f_desc+'%');
-                        $('#bar_5').css("width",result.get_sto_f_desc+'%');
-
-                        //BOX6
-                        $('#get_6_sto_v').empty();
-                        $('#get_6_sto_v_desc').empty();
-                        $('#get_6_sto_v').append(result.get_sto_v);
-                        $('#get_6_sto_v_desc').append(result.get_sto_desc);
-                        $('#bar_6').data('percentage',result.get_sto_desc+'%');
-                        $('#bar_6').css("width",result.get_sto_desc+'%'); 
-                    }
-                });
-            <?php } else { 
-                foreach ($TPs as $TP){
-                    $sto_percentage = number_format(($TP['sto_total']/$STO_TOTAL*100),2,'.',',');
-                    echo "$('#get_".$TP['row_number']."_sto').empty();";
-                    echo "$('#get_".$TP['row_number']."_desc').empty();";
-                    echo "$('#get_".$TP['row_number']."_sto').append(".$TP['sto_total'].");";
-                    echo "$('#get_".$TP['row_number']."_desc').append(".$sto_percentage.");";
-                }
-            } ?>
-        };
-
-        setInterval(function(){
-            AppendDashboard();
-            DashboardBox();
-       }, 15 * 60 * 1000);*/
+    
   </script>
 
 </html>
