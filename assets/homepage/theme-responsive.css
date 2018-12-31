@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,500,600,700&subset=latin,latin-ext);
-@import url(https://mittapp.com/ericsson/font/_getfontbyekunbar.css);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 
@@ -887,7 +886,6 @@
   animation: burst 3s infinite linear;
 }
 /* FA ANIMATION */
-/* ERICSSON & EKUNBAR LAB */
 .ecoroo{
   display: inline-block;
   width: 20px;
@@ -898,19 +896,15 @@
 }
 
 .ecoroo-warehouse{
-  background:url(../img/ericsson/icon/Warehouse_original.png) no-repeat;
   background-size: 100%;
 }
 .ecoroo-warehouse-white{
-  background:url(../img/ericsson/icon/Warehouse_original_white.png) no-repeat;
   background-size: 100%;
 }
 .ecoroo-plane{
-  background:url(../img/ericsson/icon/Plane.png) no-repeat;
   background-size: 100%;
 }
 .ecoroo-plane-white{
-  background:url(../img/ericsson/icon/Plane_white.png) no-repeat;
   background-size: 100%;
 }
 
@@ -978,7 +972,7 @@ body {
   overflow-x: hidden;
 }
 h1, h2, h3, h4, .widget, .x-navigation, .breadcrumb, .mb-title, .tile-title {
-  font-family: 'ericsson_capital', Arial;
+  font-family: 'capital', Arial;
 }
 .treeview-menu {
   font-family: arial,helvetica,clean,sans-serif;
@@ -4422,7 +4416,6 @@ background: linear-gradient(135deg, #a1c517 0%,#009045 25%,#0082b6 50%,#151f77 7
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1c517', endColorstr='#db004f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-/*ericsson color widget */
 .widget.widget-ebig-left, .ebig-left {
   background: #a1c517; /* Old browsers */
   background: -moz-linear-gradient(left, #a1c517 0%, #009f80 100%); /* FF3.6-15 */
@@ -4778,11 +4771,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1c517', end
   line-height: 75px;
 }
 
-/*ericsson colorfull
-.tile.tile-1 {
-  background:#E32119;
-  color: #FFFFFF;
-}*/
 .dashboard-row>.col-md-12{
   min-height: 1px;
   padding-left: 5px;

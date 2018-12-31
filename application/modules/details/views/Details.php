@@ -5,7 +5,6 @@
 </head>  
 <style>
 	
-   @import url('https://mittapp.com/ericsson/font/roboto/roboto.css');
    .wrapper{
    	display: flex;
     width: 75%;

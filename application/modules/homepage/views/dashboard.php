@@ -517,7 +517,6 @@
     }
     span.item-count.animate-number.semi-bold {
         font-size: 20px;
-        font-family: 'ericsson_capital', arial;
     }
     .item-1,
     .item-2,

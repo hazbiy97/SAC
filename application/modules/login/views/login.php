@@ -824,7 +824,6 @@ if (isset($this->session->userdata['logged_in'])) {
       <div class="wrap-login100">
       <?php $attributes = array('class' => 'login100-form validate-form'); echo form_open('/login/user_login_process',$attributes); ?>
           <span class="login100-form-title p-b-26" style="float:right;margin-top:-5px">
-            <!-- <img src="<?php echo base_url();?>ericsson/icon/ericsson_blue.png" style="height: 50px"> -->
           </span>
 
           <span class="login100-form-title p-b-26" style="text-align: left">
@@ -860,17 +859,6 @@ if (isset($this->session->userdata['logged_in'])) {
             </div>
           </div>
 
-          <div class="flex-sb-m w-full p-t-3 p-b-45">
-            <div class="contact100-form-checkbox">
-            </div>
-
-            <div>
-              <a href="<?php echo base_url();?>index.php/login/forgot_password" class="txt1">
-                Forgot Password?
-              </a>
-            </div>
-          </div>
-
           <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
@@ -879,16 +867,6 @@ if (isset($this->session->userdata['logged_in'])) {
               </button>
             </div>
           </div>
-
-         <!--  <div class="text-center p-t-15">
-            <span class="txt1">
-              Don’t have an account?
-            </span>
-
-            <a class="txt2" href="<?php echo base_url();?>index.php/login/add">
-              Sign Up
-            </a>
-          </div> -->
 
           <div class="text-center bottom-stick" style="line-height: 10px;">
             <span class="txt1">
@@ -899,13 +877,10 @@ if (isset($this->session->userdata['logged_in'])) {
         </form>
 
         <div class='video-link desktop' style='position:fixed;top:75%;left:20px'>
-          <!-- <a href="#video-popup"><img src="<?php echo base_url();?>assets/coroowicaksono/homepage/images/play-button.png" alt="" width="80px"></a> -->
           <br/>
           <p style='font-size:11px;max-width: 60%;color:#FFF'>Log-in is only allowed for authorized users. If you are not an authorized user, please exit immediately. In accordance with requirements of data protection laws, we hereby inform you that personally identifiable information will be handled in log files for legal, security and costs reasons.</p>
           
         </div>
-        <!--<div class="login100-more" style="background-image: url('<?php echo base_url();?>assets/img/Antenna_Tower_2.jpg');">
-        </div>-->
       </div>
     </div>
   </div>

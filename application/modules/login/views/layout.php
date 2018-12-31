@@ -30,7 +30,6 @@
 	?>   
 
  	<script src="<?php echo base_url();?>assets/homepage/js/jquery-1.11.3.min.js"></script>
-	<!-- <script src="<?php echo base_url();?>assets/homepage/js/jquery-migrate-1.2.1.min.js"></script> -->
 	<script src="<?php echo base_url();?>assets/homepage/js/plugins.js"></script>
 	<script src="<?php echo base_url();?>assets/homepage/js/main.js"></script>
 

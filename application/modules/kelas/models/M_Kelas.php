@@ -25,10 +25,24 @@ class M_Kelas extends CI_Model {
         $this->db->select('*');
         $this->db->from('class');
         $this->db->where('class_id', $class_id);
+
+        $query = $this->db->get(); //echo $sql; die();
+
+        $classname = null;
+        if ($query->num_rows() == 1) {
+            $classname = $query->result_array()[0]['short_name']; 
+            // echo $classname; die();
+        }
+
+        $tableClass = $classname.'_att';
+
+        $this->db->select('*');
+        $this->db->from($tableClass);
+        // $this->db->where('class_id', $class_id);
         
         $query = $this->db->get(); //echo $sql; die();
 
-        if ($query->num_rows() == 1) {
+        if ($query->num_rows() >= 1) {
             // return $query->result_array();
             $results = $query->result_array();
             $columns = [];
@@ -56,6 +70,7 @@ class M_Kelas extends CI_Model {
 
             // echo "<pre>";
             // print_r($result);
+            // die();
 
             return $result;
             // die();
