@@ -28,28 +28,44 @@
 	</button>
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
 		<ul class="navbar-nav mr-auto">
-			<?php if (is_array($classes)): ?>
-				<li class="nav-item dropdown <?php echo strcmp($activeNavbarItem, 'Dijual') == 0 ? 'active' : null;?>">
-					<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>homepage" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S1</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown04">
-						<?php foreach ($classes as $key => $class): ?>
-							<?php if ($class['grade'] == 1): ?>
-								<a class="dropdown-item" href="<?= base_url().'kelas/attendance/'.$class['class_id'] ?>"><?= $class['name'] ?></a>
-							<?php endif ?>
-						<?php endforeach ?>
-					</div>
-				</li>
-				<li class="nav-item dropdown <?php echo strcmp($activeNavbarItem, 'Dijual') == 0 ? 'active' : null;?>">
-					<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>homepage" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S2</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown04">
-						<?php foreach ($classes as $key => $class): ?>
-							<?php if ($class['grade'] == 2): ?>
-								<a class="dropdown-item" href="<?= base_url().'kelas/attendance/'.$class['class_id'] ?>"><?= $class['name'] ?></a>
-							<?php endif ?>
-						<?php endforeach ?>
-					</div>
-				</li>
-			<?php else: ?>
+			<?php 
+				$classDropDown = [];
+
+				foreach ($classes as $key => $class): 
+					$classDropDown[$class['grade']] = true;
+				endforeach; 
+
+				if (is_array($classes)): 
+					if (isset($classDropDown[1]) && $classDropDown[1]): ?>
+						<li class="nav-item dropdown <?php echo strcmp($activeNavbarItem, 'Dijual') == 0 ? 'active' : null;?>">
+							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>homepage" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S1</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown04">
+								<?php foreach ($classes as $key => $class): ?>
+									<?php if ($class['grade'] == 1): ?>
+										<a class="dropdown-item" href="<?= base_url().'kelas/attendance/'.$class['class_id'] ?>"><?= $class['name'] ?></a>
+									<?php endif ?>
+								<?php endforeach ?>
+							</div>
+						</li>
+					<?php else: ?>
+						<li class="nav-item"><a class="nav-link" href="#">S1</a></li>
+					<? endif ?>
+					<? if (isset($classDropDown[2]) && $classDropDown[2]): ?>
+
+						<li class="nav-item dropdown <?php echo strcmp($activeNavbarItem, 'Dijual') == 0 ? 'active' : null;?>">
+							<a class="nav-link dropdown-toggle" href="<?php echo base_url();?>homepage" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S2</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown04">
+								<?php foreach ($classes as $key => $class): ?>
+									<?php if ($class['grade'] == 2): ?>
+										<a class="dropdown-item" href="<?= base_url().'kelas/attendance/'.$class['class_id'] ?>"><?= $class['name'] ?></a>
+									<?php endif ?>
+								<?php endforeach ?>
+							</div>
+						</li>
+					<?php else: ?>
+						<li class="nav-item"><a class="nav-link" href="#">S1</a></li>
+					<? endif ?>
+			<? else: ?>
 				<li class="nav-item"><a class="nav-link" href="#">S1</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">S2</a></li>
 			<?php endif ?>
