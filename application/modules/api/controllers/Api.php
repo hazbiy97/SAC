@@ -57,5 +57,15 @@ class Api extends MX_Controller
       'result' => 'success'
     ]);
   }
+
+  public function insertTF(){
+    $user_name = $this->input->post('user_name');
+
+    $command = escapeshellcmd('COMMAND DISINI DITAMBAH SPASI DIAKHIR BUAT PARAM ' . $user_name);
+    $output = shell_exec($command);
+    echo json_encode([
+      'result' => 'success'
+    ]);
+  }
 }
 
