@@ -139,6 +139,9 @@ function issetor(&$var, $default = false) {
         <h2 style="display: inline-block;"><?= issetor($class['name']) ?></h2>
         <button class="btn btn-outline-primary float-right" onclick="initTF()">Run</button>
         <button class="btn btn-outline-info float-right" style="margin-right: 10px" onclick="trainTF()">Train</button>
+        <a href="<?= base_url().'insert/students/'. issetor($class['class_id'])?>">
+          <button class="btn btn-outline-info float-right" style="margin-right: 10px" onclick="insertTF()">Insert</button>
+        </a>
         <h4 style="color: gray;"><?= issetor($class['place']) ?></h4>
       </div>
       <table id="class_table" class="stripe row-border order-column nowrap" style="width:100%; "></table>
