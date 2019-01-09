@@ -30,3 +30,4 @@ Nur Hazbiy Shaffan	(1506736575)
 
 # Pre-Model Link:
 # http://bit.ly/SAC_Model
+Download the model, put it in the "model_checkpoints" directory and define the directory address on line 10 in the program code "classifier_train" which is "modeldir"
