@@ -164,12 +164,13 @@ function issetor(&$var, $default = false) {
         'url': '<?= base_url()?>api/initTF',
         'dataType': 'json',
         'success': function (data) {
-          alert('Attendance checking successful!');
+          //alert('Attendance checking successful!');
           location.reload();
         },
         'error':  function (data) {
-          alert('Error occured when running the attendance check');
-          console.log('Error occured: ', data);
+          //alert('Error occured when running the attendance check');
+          //console.log('Error occured: ', data);
+          location.reload();
         },
         cache: true
       })
@@ -180,12 +181,13 @@ function issetor(&$var, $default = false) {
         'url': '<?= base_url()?>api/trainTF',
         'dataType': 'json',
         'success': function (data) {
-          alert('Dataset training successful!');
+          //alert('Dataset training successful!');
           location.reload();
         },
         'error':  function (data) {
-          alert('Dataset training failed!');
-          console.log('Error occured: ', data);
+          //alert('Dataset training failed!');
+          //console.log('Error occured: ', data);
+          location.reload();
         },
         cache: true
       })

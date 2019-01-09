@@ -1,0 +1,3 @@
+./pre_img\Yeremia\Yeremia_1.png 279 95 508 406
+./pre_img\Yeremia\Yeremia_2.png 268 76 506 394
+./pre_img\Yeremia\Yeremia_3.png 275 95 511 398

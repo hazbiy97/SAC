@@ -1,0 +1,64 @@
+./pre_img\Ferdi\Ferdi Andika.png 328 225 702 750
+./pre_img\Ferdi\Ferdi_10.png 240 78 455 359
+./pre_img\Ferdi\Ferdi_11.png 249 82 461 359
+./pre_img\Ferdi\Ferdi_12.png 240 88 452 371
+./pre_img\Ferdi\Ferdi_13.png 164 117 372 375
+./pre_img\Ferdi\Ferdi_14.png 276 156 447 353
+./pre_img\Ferdi\Ferdi_15.png 216 123 384 341
+./pre_img\Ferdi\Ferdi_16.png 251 156 432 399
+./pre_img\Ferdi\Ferdi_17.png 150 139 326 319
+./pre_img\Ferdi\Ferdi_7.png 229 91 441 379
+./pre_img\Ferdi\Ferdi_8.png 240 102 448 373
+./pre_img\Ferdi\Ferdi_9.png 227 97 429 374
+./pre_img\Ferdi\Photo.png 259 386 482 680
+./pre_img\Ferdi\photo_ch.png 71 62 197 241
+./pre_img\Ferdi\photo_gm.png 53 50 145 181
+./pre_img\Ferdi\Photo_web.png 272 267 677 807
+./pre_img\Ferdi\roundpp.png 66 42 138 133
+./pre_img\Gerry\Gerry_1.png 264 100 427 316
+./pre_img\Gerry\Gerry_10.png 270 90 445 327
+./pre_img\Gerry\Gerry_11.png 242 96 418 335
+./pre_img\Gerry\Gerry_12.png 257 96 426 322
+./pre_img\Gerry\Gerry_2.png 259 109 417 315
+./pre_img\Gerry\Gerry_3.png 253 138 420 347
+./pre_img\Gerry\Gerry_4.png 233 106 392 297
+./pre_img\Gerry\Gerry_5.png 244 108 403 306
+./pre_img\Gerry\Gerry_6.png 245 129 439 374
+./pre_img\Gerry\Gerry_7.png 260 65 433 276
+./pre_img\Gerry\Gerry_8.png 246 74 427 323
+./pre_img\Gerry\Gerry_9.png 265 88 442 327
+./pre_img\Hazbiy\Hazbiy_1.png 240 133 417 363
+./pre_img\Hazbiy\Hazbiy_10.png 230 111 415 349
+./pre_img\Hazbiy\Hazbiy_11.png 219 136 418 402
+./pre_img\Hazbiy\Hazbiy_12.png 242 134 430 381
+./pre_img\Hazbiy\Hazbiy_13.png 224 127 420 379
+./pre_img\Hazbiy\Hazbiy_14.png 263 126 454 373
+./pre_img\Hazbiy\Hazbiy_15.png 276 142 453 377
+./pre_img\Hazbiy\Hazbiy_16.png 206 120 386 363
+./pre_img\Hazbiy\Hazbiy_17.png 197 116 380 363
+./pre_img\Hazbiy\Hazbiy_18.png 203 118 394 367
+./pre_img\Hazbiy\Hazbiy_19.png 224 110 407 333
+./pre_img\Hazbiy\Hazbiy_2.png 230 128 414 365
+./pre_img\Hazbiy\Hazbiy_20.png 240 108 411 309
+./pre_img\Hazbiy\Hazbiy_3.png 193 128 371 352
+./pre_img\Hazbiy\Hazbiy_4.png 211 118 396 361
+./pre_img\Hazbiy\Hazbiy_5.png 217 122 400 359
+./pre_img\Hazbiy\Hazbiy_6.png 236 125 415 355
+./pre_img\Hazbiy\Hazbiy_7.png 252 119 429 356
+./pre_img\Hazbiy\Hazbiy_8.png 249 129 422 345
+./pre_img\Hazbiy\Hazbiy_9.png 237 106 403 295
+./pre_img\Hermawan\Hermawan_1.png 270 118 433 339
+./pre_img\Hermawan\Hermawan_10.png 241 125 406 336
+./pre_img\Hermawan\Hermawan_2.png 263 108 413 294
+./pre_img\Hermawan\Hermawan_3.png 160 106 324 313
+./pre_img\Hermawan\Hermawan_4.png 232 151 390 349
+./pre_img\Hermawan\Hermawan_5.png 374 155 522 341
+./pre_img\Hermawan\Hermawan_6.png 283 177 412 343
+./pre_img\Hermawan\Hermawan_7.png 241 124 402 340
+./pre_img\Hermawan\Hermawan_8.png 192 108 375 354
+./pre_img\Hermawan\Hermawan_9.png 171 122 342 345
+./pre_img\Yeremia\IMG_0959.png
+./pre_img\Yeremia\IMG_0960.png
+./pre_img\Yeremia\IMG_0961.png 1909 882 2745 2023
+./pre_img\Yeremia\IMG_0962.png
+./pre_img\Yeremia\IMG_0963.png

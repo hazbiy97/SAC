@@ -167,12 +167,13 @@ function issetor(&$var, $default = false) {
         	user_name,
         },
         'success': function (data) {
-          alert('Dataset insert successful!');
+          //alert('Dataset insert successful!');
           window.location.replace('<?= base_url() ?>/kelas/attendance/<?= $class_details["class_id"] ?>');
         },
         'error':  function (data) {
-          alert('Dataset insert failed!');
-          console.log('Error occured: ', data);
+          //alert('Dataset insert failed!');
+          //console.log('Error occured: ', data);
+          window.location.replace('<?= base_url() ?>/kelas/attendance/<?= $class_details["class_id"] ?>');
         },
         cache: true
       })

@@ -1,0 +1,35 @@
+./pre_img\Amir\Amir_1.png 297 105 454 291
+./pre_img\Amir\Amir_2.png 262 109 406 291
+./pre_img\Amir\Amir_3.png 284 101 426 256
+./pre_img\Amir\Amir_4.png 274 118 445 320
+./pre_img\Amir\Amir_5.png 321 117 475 292
+./pre_img\Amir\Amir_6.png 301 117 452 294
+./pre_img\Amir\Amir_7.png 309 110 472 290
+./pre_img\Amir\Amir_8.png 275 96 428 285
+./pre_img\Amir\Amir_9.png 290 93 440 260
+./pre_img\Delphi\Delphi_1.png 269 145 417 343
+./pre_img\Delphi\Delphi_10.png 227 143 369 327
+./pre_img\Delphi\Delphi_11.png 310 136 434 314
+./pre_img\Delphi\Delphi_13.png 279 130 394 248
+./pre_img\Delphi\Delphi_2.png 232 151 372 331
+./pre_img\Delphi\Delphi_3.png 211 162 330 336
+./pre_img\Delphi\Delphi_4.png 332 141 453 323
+./pre_img\Delphi\Delphi_6.png
+./pre_img\Delphi\Delphi_7.png 271 197 442 405
+./pre_img\Delphi\Delphi_8.png 266 190 429 399
+./pre_img\Delphi\Delphi_9.png 243 143 390 334
+./pre_img\Ferdi\Ferdi Andika.png 328 225 702 750
+./pre_img\Ferdi\Ferdi_10.png 240 78 455 359
+./pre_img\Ferdi\Ferdi_11.png 249 82 461 359
+./pre_img\Ferdi\Ferdi_12.png 240 88 452 371
+./pre_img\Ferdi\Ferdi_13.png 164 117 372 375
+./pre_img\Ferdi\Ferdi_14.png 276 156 447 353
+./pre_img\Ferdi\Ferdi_15.png 216 123 384 341
+./pre_img\Ferdi\Ferdi_16.png 251 156 432 399
+./pre_img\Ferdi\Ferdi_17.png 150 139 326 319
+./pre_img\Ferdi\Ferdi_18.png 180 141 329 299
+./pre_img\Ferdi\Ferdi_7.png 229 91 441 379
+./pre_img\Ferdi\Ferdi_8.png 240 102 448 373
+./pre_img\Ferdi\Ferdi_9.png 227 97 429 374
+./pre_img\Ferdi\IMG_0500 (1).png 1616 1743 2267 2526
+./pre_img\Ferdi\IMG_0501 (1).png

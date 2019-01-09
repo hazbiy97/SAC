@@ -44,6 +44,7 @@ class Api extends MX_Controller
 
   public function initTF(){
     $command = escapeshellcmd('C:\Users\SESA320707\venv\Scripts\python.exe real_time_face_recognition.py');
+    //$command = escapeshellcmd('C:\Users\SESA320707\venv\Scripts\python.exe main.py');
     $output = shell_exec($command);
     echo json_encode([
       'result' => 'success'
@@ -51,18 +52,7 @@ class Api extends MX_Controller
   }
 
   public function trainTF(){
-    $command = escapeshellcmd('C:\Users\SESA320707\venv\Scripts\python.exe classifier_train.py');
-    $output = shell_exec($command);
-    echo json_encode([
-      'result' => 'success'
-    ]);
-  }
-
-  public function insertTF(){
-    $user_name = $this->input->post('user_name');
-    $command = escapeshellcmd('C:\Users\SESA320707\venv\Scripts\python.exe input_dataset.py ' . $user_name);
-    $output = shell_exec($command);
-    $command = escapeshellcmd('C:\Users\SESA320707\venv\Scripts\python.exe initializer.py');
+    $command = escapeshellcmd('ping www.google.com -t 5');
     $output = shell_exec($command);
     echo json_encode([
       'result' => 'success'

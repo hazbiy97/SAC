@@ -1,0 +1,44 @@
+./pre_img\Ferdi\IMG_0502 (1).png 1751 1750 2282 2405
+./pre_img\Ferdi\IMG_0503 (1).png 1734 1779 2249 2407
+./pre_img\Ferdi\IMG_0504 (1).png 1597 1726 2248 2477
+./pre_img\Ferdi\IMG_0505 (1).png
+./pre_img\Ferdi\IMG_0506 (1).png 1535 1632 2201 2359
+./pre_img\Ferdi\IMG_0507 (1).png
+./pre_img\Ferdi\IMG_0508 (1).png
+./pre_img\Ferdi\IMG_0509 (1).png 1742 1562 2137 2034
+./pre_img\Ferdi\IMG_0510 (1).png
+./pre_img\Ferdi\IMG_0511 (1).png 1759 1513 2185 2012
+./pre_img\Ferdi\IMG_0512 (1).png 1782 1445 2189 1918
+./pre_img\Ferdi\IMG_0513 (1).png 1834 1563 2066 1850
+./pre_img\Ferdi\IMG_0514 (1).png
+./pre_img\Ferdi\IMG_0515 (1).png
+./pre_img\Ferdi\IMG_0516 (1).png 1859 1404 2180 1835
+./pre_img\Ferdi\IMG_0517 (1).png 1887 1431 2137 1750
+./pre_img\Ferdi\IMG_0518 (1).png 1881 1318 2277 1781
+./pre_img\Ferdi\IMG_0519 (1).png 1894 1291 2279 1753
+./pre_img\Ferdi\IMG_0520 (1).png 1895 1322 2172 1683
+./pre_img\Ferdi\IMG_0521.png 1893 1254 2262 1683
+./pre_img\Ferdi\IMG_0522.png
+./pre_img\Ferdi\IMG_0523 (1).png 1917 1286 2178 1648
+./pre_img\Ferdi\IMG_0524 (1).png 1927 1257 2229 1645
+./pre_img\Ferdi\IMG_0525 (1).png 1911 1215 2271 1651
+./pre_img\Ferdi\IMG_0526 (1).png 1979 1227 2276 1607
+./pre_img\Ferdi\IMG_0527 (1).png 1980 1162 2320 1595
+./pre_img\Ferdi\IMG_0528 (1).png 1979 1147 2313 1543
+./pre_img\Ferdi\IMG_0529.png 1974 1116 2326 1550
+./pre_img\Ferdi\IMG_0530.png 1983 1088 2324 1507
+./pre_img\Ferdi\IMG_0531.png 2000 1077 2253 1409
+./pre_img\Ferdi\IMG_0532.png 1975 1045 2235 1385
+./pre_img\Ferdi\IMG_0533.png 1935 974 2356 1468
+./pre_img\Ferdi\IMG_0534.png
+./pre_img\Ferdi\IMG_0535.png 1956 1028 2345 1486
+./pre_img\Ferdi\IMG_0536.png
+./pre_img\Ferdi\IMG_0537.png
+./pre_img\Ferdi\IMG_0538.png
+./pre_img\Ferdi\IMG_0539.png
+./pre_img\Ferdi\IMG_0540.png
+./pre_img\Ferdi\IMG_0541.png 2009 1069 2334 1452
+./pre_img\Ferdi\IMG_0542.png
+./pre_img\Ferdi\IMG_0543.png
+./pre_img\Ferdi\IMG_0544.png
+./pre_img\Ferdi\IMG_0545 (1).png 1286 95 1324 152
